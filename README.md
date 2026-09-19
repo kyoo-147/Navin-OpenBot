@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./docs/assets/openbot-banner.png" alt="Navin OpenBot" />
+<img src="./docs/assets/openbot-banner.webp" alt="Navin OpenBot" />
 
 # Navin OpenBot
 
@@ -94,6 +94,12 @@ A **Deck** is a portable working setup — crew, skills, tools, memory, policies
 The learning loop is `Reason → Execute → Verify → Learn → Reuse`. When a workflow succeeds, OpenBot can preserve what mattered, and repeated work can gradually move from expensive general reasoning toward reusable execution.
 
 The general model remains available when something new or uncertain happens. Use reasoning where reasoning is useful; reuse what already works.
+
+### Skills
+
+Skills capture repeatable ways of working. A Skill can carry instructions, tools, decision rules, validation, expected outputs, permissions, examples, and tests.
+
+The direction goes beyond storing Skills as prompt files. Skills should be testable, versioned, and measurable, and a successful run should be capturable as a Skill — the "Teach a Task" path — so repeated work can move toward procedural execution.
 
 ### Memory
 
