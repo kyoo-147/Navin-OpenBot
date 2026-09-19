@@ -20,6 +20,12 @@ applies.
 - Apache-2.0 license
 - Contributing, security, and code of conduct policies
 
+### Changed
+
+- Condensed the README around features: the "why" essay and architecture walkthrough
+  moved to `docs/`, and the diagrams now live in the documents they illustrate
+- Added the OpenBot banner to the top of the README
+
 ### Notes
 
 No runnable implementation is published yet. Nothing in this repository should

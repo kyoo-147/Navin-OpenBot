@@ -33,6 +33,13 @@ Target loop:
 
 `Reason → Execute → Verify → Learn → Reuse`
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./diagrams/learning-loop-dark.svg" />
+    <img src="./diagrams/learning-loop.svg" alt="The learning loop: reason, execute, verify, learn, reuse" />
+  </picture>
+</p>
+
 ### Skill Compilation
 Investigate when a successful Skill can move toward:
 - workflow graph
@@ -43,6 +50,13 @@ Investigate when a successful Skill can move toward:
 - deterministic execution
 
 LLM reasoning remains available for exceptions.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./diagrams/compilation-path-dark.svg" />
+    <img src="./diagrams/compilation-path.svg" alt="Progressive compilation: reasoning, skill, workflow, tool calls and scripts, procedural execution" />
+  </picture>
+</p>
 
 ### Evaluation and Replay
 How to compare agents and Decks using reproducible runs, budgets, tasks, and measurements.

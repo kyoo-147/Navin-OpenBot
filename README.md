@@ -1,115 +1,63 @@
 <div align="center">
 
+<img src="./docs/assets/openbot-banner.png" alt="Navin OpenBot" />
+
 # Navin OpenBot
 
 **Start with the work, not the stack.**
 
 Navin OpenBot brings together the right crew, models, harnesses, tools, and machines around the job, with every part yours to configure, replace, and shape however you want.
 
-[Website](https://navinresearch.com) · [Documentation](./docs) · Marketplace · Community
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
+[![Status](https://img.shields.io/badge/status-early%20development-orange.svg)](#project-status)
+
+[Website](https://openbot.navinresearch.com/) · [Documentation](./docs) · Marketplace · Community
 
 </div>
 
 ---
 
-> **Project Status**
+> **Project status**
 >
-> OpenBot is in early development.
+> OpenBot is in early development. Nothing here is installable yet.
 >
-> The architecture, interfaces, and core concepts described here represent both working components and the direction of the project. Features that are not ready yet are marked accordingly.
+> The concepts below describe both working components and the direction of the project. Features that are not ready are marked accordingly.
 
-## What is OpenBot?
+## What it is
 
 OpenBot is a place to hand off real work.
 
-Give it a job and it can bring together the people-shaped roles, models, tools, harnesses, and machines needed to carry that work through.
+Give it a job and it brings together the people-shaped roles, models, tools, harnesses, and machines needed to carry that work through. You can keep it simple with one worker and one task, or build a complete crew with different roles, tools, permissions, memory, and ways of working.
 
-You can keep things simple with one worker and one task, or build a complete crew with different roles, tools, permissions, memory, and ways of working.
+Nothing important has to be fixed. Change the model. Replace the harness. Move execution from your laptop to a server. Swap a tool. Add another worker. Remove one. Build your own runtime.
 
-Nothing important has to be fixed.
+OpenBot adapts around the work instead of forcing the work into one stack.
 
-Change the model. Replace the harness. Move execution from your laptop to a server. Swap a tool. Change how memory works. Add another worker. Remove one. Build your own runtime.
+## Quick start
 
-OpenBot is meant to adapt around the work instead of forcing the work into one stack.
+OpenBot is not ready for a stable public installation yet. Installation instructions will be added when the first usable release is available.
 
-## Why OpenBot?
+Until then, the entry point is the design documentation in [`docs/`](./docs).
 
-The agent ecosystem is growing quickly, but most tools still make an early decision for you.
-
-One model.
-
-One harness.
-
-One computer.
-
-One workflow.
-
-One way of organizing agents.
-
-OpenBot takes a different approach.
-
-The job comes first.
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/job-router-dark.svg" />
-    <img src="./docs/diagrams/job-router.svg" alt="The job comes first: OpenBot Router selects crew, harness, and runtime, then work runs through tools and memory" />
-  </picture>
-</p>
-
-OpenBot is designed so every layer can evolve independently.
-
-## Built around the work
+## Features
 
 ### Any model
 
-Use the models that make sense for the task.
+Use the models that make sense for the task. OpenBot is designed around a provider-neutral model interface covering hosted APIs, local models, and compatible custom endpoints.
 
-OpenBot is being designed around provider-neutral model interfaces, including hosted APIs, local models, and compatible custom endpoints.
-
-The long-term goal is not simply to support many models.
-
-It is to let different work use different intelligence.
+The goal is not simply to support many models — it is to let different work use different intelligence.
 
 ### Any harness
 
-A model does not have to be the worker.
+A model does not have to be the worker. Agent harnesses are treated as replaceable execution layers.
 
-OpenBot treats agent harnesses as replaceable execution layers.
-
-The same system may eventually route work through:
-
-* Native OpenBot workers
-* Claude Code
-* Codex
-* OpenCode
-* Pi
-* OpenHands
-* compatible third-party harnesses
-* custom harness adapters
-
-A coding job may use a coding harness.
-
-Research may use a different one.
-
-A private task may stay entirely local.
+Planned adapters include native OpenBot workers, Claude Code, Codex, OpenCode, Pi, OpenHands, compatible third-party harnesses, and custom adapters. A coding job may use a coding harness. A private task may stay entirely local.
 
 ### Any machine
 
-Execution should happen where it makes sense.
+Execution should happen where it makes sense: local computers, cloud machines, user-owned VPS instances, isolated sandboxes, remote hosts, GPU machines, private infrastructure, and edge devices.
 
-OpenBot is being designed for:
-
-* local computers
-* cloud machines
-* user-owned VPS instances
-* isolated sandboxes
-* remote hosts
-* GPU machines
-* private infrastructure
-* edge devices
-
-The default experience should remain simple.
+The default stays simple:
 
 ```text
 Run on: Auto
@@ -117,322 +65,49 @@ Run on: Auto
 
 Advanced users can control every part.
 
-## Crew
+### Crew
 
-OpenBot calls a working group a **Crew**.
+OpenBot calls a working group a **Crew** — one worker or many. Each member can have its own role, instructions, model, harness, tools, memory, permissions, runtime, budget, and approval rules.
 
-A Crew can contain one worker or many.
+A simple task may only need one worker. A product task might form a crew of research, builder, reviewer, and QA. The crew changes with the job.
 
-Each member can have its own:
+### Cards and Decks
 
-* role
-* instructions
-* model
-* harness
-* tools
-* memory
-* permissions
-* runtime
-* budget
-* approval rules
+**Cards** are reusable pieces of an OpenBot setup, packaged so capability does not have to live in one giant configuration file: Agent, Model, Skill, Tool, Memory, Runtime, Policy, Trigger, Trap, and Brain Cards.
 
-A simple task may only need one worker.
+A **Deck** is a portable working setup — crew, skills, tools, memory, policies, and runtime bundled together. A user should be able to start with `Equip Deck` and customize anything later.
 
-A product task might form something like:
+### Ways to work
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/crew-dark.svg" />
-    <img src="./docs/diagrams/crew.svg" alt="A crew: one lead delegating to research, builder, and reviewer, with QA checking the reviewer's output" />
-  </picture>
-</p>
+| Mode | What it is |
+| --- | --- |
+| **Solo** | One person and one worker, for straightforward jobs. |
+| **Cowork** | You stay inside the loop and intervene whenever you want. |
+| **Dual** | One worker does the job, another checks it independently. |
+| **Team** | Multiple specialized workers collaborate on the same outcome. |
+| **Arena** | Different configurations run the same job, constraints, and budget, so you measure results instead of guessing. |
 
-The Crew can change with the job.
+### Learn from the work
 
-## Cards
+The learning loop is `Reason → Execute → Verify → Learn → Reuse`. When a workflow succeeds, OpenBot can preserve what mattered, and repeated work can gradually move from expensive general reasoning toward reusable execution.
 
-Cards are reusable pieces of an OpenBot setup.
+The general model remains available when something new or uncertain happens. Use reasoning where reasoning is useful; reuse what already works.
 
-They provide a common way to package capability without forcing everything into one giant configuration file.
+### Memory
 
-### Agent Card
-
-Defines a role that can perform work.
-
-Examples:
-
-```text
-Researcher
-Builder
-Reviewer
-QA
-Operator
-```
-
-### Model Card
-
-Defines intelligence available to a worker.
-
-### Skill Card
-
-Defines a reusable way of completing a task.
-
-### Tool Card
-
-Connects a worker to a tool or external system.
-
-### Memory Card
-
-Provides reusable knowledge or context.
-
-### Runtime Card
-
-Defines where work can execute.
-
-### Policy Card
-
-Defines what a worker may and may not do.
-
-### Trigger Card
-
-Defines when work begins.
-
-### Trap Card
-
-Defines a condition that interrupts or redirects work.
-
-For example:
-
-```text
-IF production deployment
-
-THEN
-  pause
-  snapshot
-  review
-  request approval
-```
-
-### Brain Card
-
-Provides an alternative decision or execution system.
-
-Brain Cards are also where experimental Navin Research work can connect to OpenBot.
-
-## Decks
-
-A **Deck** is a portable working setup.
-
-Instead of configuring every worker, tool, model, permission, and workflow manually, a Deck can package them together.
-
-For example:
-
-```text
-Product Builder Deck
-
-Crew
-  Planner
-  Builder
-  Reviewer
-  QA
-
-Skills
-  Repository Analysis
-  Implementation
-  Browser Verification
-  Release Review
-
-Tools
-  Terminal
-  Browser
-  GitHub
-
-Memory
-  Project Context
-  Engineering Guidelines
-
-Policies
-  No production deployment without approval
-
-Runtime
-  Local or isolated sandbox
-```
-
-A user should be able to start with:
-
-```text
-Equip Deck
-```
-
-and customize anything later.
-
-## Ways to work
-
-### Solo
-
-One person and one worker.
-
-Use it when the job is straightforward.
-
-### Cowork
-
-You remain inside the loop and work alongside OpenBot.
-
-Intervene whenever you want.
-
-### Dual
-
-One worker does the job.
-
-Another checks it independently.
-
-```text
-Builder
-   +
-Reviewer
-```
-
-### Team
-
-Multiple specialized workers collaborate on the same outcome.
-
-### Arena
-
-Run different configurations against the same job.
-
-Compare:
-
-* models
-* harnesses
-* workers
-* Skills
-* Decks
-* routing strategies
-
-Use the same task, constraints, and budget.
-
-Measure the result instead of guessing.
-
-## Learn from the work
-
-OpenBot should not solve the same problem from zero forever.
-
-The learning loop is:
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/learning-loop-dark.svg" />
-    <img src="./docs/diagrams/learning-loop.svg" alt="The learning loop: reason, execute, verify, learn, reuse" />
-  </picture>
-</p>
-
-When a workflow succeeds, OpenBot can preserve what mattered.
-
-Repeated work can gradually move from expensive general reasoning toward reusable execution.
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/compilation-path-dark.svg" />
-    <img src="./docs/diagrams/compilation-path.svg" alt="Progressive compilation: reasoning, skill, workflow, tool calls and scripts, procedural execution" />
-  </picture>
-</p>
-
-The general model remains available when something new or uncertain happens.
-
-The goal is simple:
-
-**Use reasoning where reasoning is useful. Reuse what already works.**
-
-## Skills
-
-Skills capture repeatable ways of working.
-
-A Skill may contain:
-
-* instructions
-* tools
-* decision rules
-* validation
-* expected outputs
-* permissions
-* examples
-* tests
-
-OpenBot's longer-term direction goes beyond storing Skills as prompt files.
-
-Skills should be testable, versioned, measurable, and eventually compilable into more efficient forms where possible.
-
-## Memory
-
-Different kinds of memory should not all live in one bucket.
-
-OpenBot is being designed around scoped memory.
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/memory-scopes-dark.svg" />
-    <img src="./docs/diagrams/memory-scopes.svg" alt="Memory scopes from user down to temporary context" />
-  </picture>
-</p>
-
-Memory can carry ownership, provenance, permissions, confidence, and lifetime.
+Different kinds of memory do not all live in one bucket. Memory is scoped from user through organization, workspace, project, crew, worker, and task down to temporary context, and it can carry ownership, provenance, permissions, confidence, and lifetime.
 
 A worker should only see what it needs.
 
-## Routing
+### Routing
 
-OpenBot should be able to decide more than which model to call.
-
-Routing may consider:
-
-```text
-task
-complexity
-cost
-latency
-privacy
-available tools
-runtime
-historical success
-context requirements
-permissions
-```
-
-The router can then select:
-
-```text
-Worker
-Model
-Harness
-Runtime
-Tools
-```
+Routing decides more than which model to call. It may consider task, complexity, cost, latency, privacy, available tools, runtime, historical success, context requirements, and permissions, then select the worker, model, harness, runtime, and tools.
 
 Manual control remains available.
 
-## Tools and integrations
+### Human control
 
-OpenBot is being designed to work with both direct integrations and open tool protocols.
-
-Planned integration paths include:
-
-* MCP
-* APIs
-* command-line tools
-* browsers
-* desktop applications
-* local programs
-* custom tools
-
-If there is no direct integration, computer use can provide another path.
-
-## Human control
-
-Autonomy should have boundaries.
-
-OpenBot is being designed around explicit permissions and approval points.
-
-Examples:
+Autonomy should have boundaries. Permissions and approval points are explicit, and different workers can have different permissions — a researcher does not need production access, and a deployment worker does not need every company secret.
 
 | Action | Policy |
 | --- | --- |
@@ -444,313 +119,108 @@ Examples:
 | External network | Restricted |
 | Maximum task cost | $5 |
 
-Different workers can have different permissions.
+### Runs, replay, and evaluation
 
-A researcher does not need production access.
+Runs should be inspectable — worker, model, harness, runtime, tools, handoffs, cost, latency, outputs, retries, approvals, and failures — and should eventually support **inspect, replay, fork, compare,** and **retry**.
 
-A deployment worker does not need every company secret.
+This is also the foundation for evaluating Skills, Decks, workers, and routing policies.
 
-## Runs, replay, and evaluation
+### Experimental intelligence
 
-A useful system should be able to explain what happened.
+OpenBot is a place for experimental work from Navin Research. **Synomorph** explores whether successful repeated behavior can move from general reasoning into specialized procedural systems.
 
-OpenBot aims to make runs inspectable.
-
-A run may record:
-
-* worker
-* model
-* harness
-* runtime
-* tools
-* handoffs
-* cost
-* latency
-* outputs
-* retries
-* approvals
-* failures
-
-Runs should eventually support:
-
-```text
-Inspect
-Replay
-Fork
-Compare
-Retry
-```
-
-This also provides the foundation for evaluating Skills, Decks, workers, and routing policies.
-
-## Marketplace
-
-The OpenBot Marketplace is planned as a place for reusable working systems, not only prompts.
-
-Possible packages include:
-
-* Cards
-* Decks
-* Skills
-* Tools
-* MCP integrations
-* workflows
-* memory packs
-* policies
-* evaluators
-* datasets
-* runtime adapters
-* harness adapters
-
-Creators should eventually be able to:
-
-```text
-Publish
-Fork
-Remix
-Version
-Benchmark
-Share
-```
-
-Marketplace packages should carry useful technical information such as compatibility, permissions, dependencies, version history, and evaluation results.
-
-## Portability
-
-OpenBot should earn retention through usefulness, not by making work difficult to move elsewhere.
-
-The project is being designed around portable components.
-
-Long-term work includes specifications for reusable Cards and Decks that can be exported, versioned, shared, and implemented by other tools.
-
-Nothing here is presented as a finalized standard yet.
-
-## Experimental intelligence
-
-OpenBot also provides a place for experimental work from Navin Research.
-
-**Synomorph** explores whether successful repeated behavior can move from general reasoning into specialized procedural systems.
-
-Candidate approaches include:
-
-* deterministic workflows
-* small policy models
-* reservoir systems
-* spiking systems
-* synthetic neural structures
-* biologically inspired networks
-
-These systems are not assumed to be better than general models.
-
-They have to earn their place through evaluation.
-
-General reasoning remains responsible for novelty.
-
-Specialized systems are explored for repeated, constrained, low-latency, embodied, or edge workloads.
-
-## Architecture
-
-The planned architecture separates the pieces that are usually bundled together.
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/architecture-dark.svg" />
-    <img src="./docs/diagrams/architecture.svg" alt="OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning" />
-  </picture>
-</p>
-
-The architecture is intentionally modular.
-
-No single model, harness, runtime, or provider should become a permanent dependency of the whole system.
-
-## Project status
-
-OpenBot is currently being built.
-
-The roadmap is roughly divided into the following stages.
-
-### Foundation
-
-* [ ] Core worker runtime
-* [ ] Task/session model
-* [ ] Provider abstraction
-* [ ] Tool execution
-* [ ] Local filesystem
-* [ ] Terminal
-* [ ] Basic web interface
-* [ ] Configuration system
-
-### Crew
-
-* [ ] Multiple workers
-* [ ] Parallel execution
-* [ ] Worker-to-worker messages
-* [ ] Task handoff
-* [ ] Shared workspace
-* [ ] Scoped memory
-* [ ] Human interruption
-
-### Runtime
-
-* [ ] Local runtime
-* [ ] Docker runtime
-* [ ] Remote runtime
-* [ ] Cloud sandbox adapters
-* [ ] Runtime routing
-
-### Harnesses
-
-* [ ] Native OpenBot
-* [ ] Codex adapter
-* [ ] Claude Code adapter
-* [ ] OpenCode adapter
-* [ ] Pi adapter
-* [ ] OpenHands adapter
-
-### Cards and Decks
-
-* [ ] Card specification
-* [ ] Deck format
-* [ ] Import / export
-* [ ] Deck editor
-* [ ] Versioning
-
-### Learning
-
-* [ ] Skill capture
-* [ ] Teach a Task
-* [ ] Run replay
-* [ ] Skill evaluation
-* [ ] Skill optimization
-* [ ] Habit compilation
-
-### Marketplace
-
-* [ ] Public registry
-* [ ] Package discovery
-* [ ] Install / update
-* [ ] Fork / remix
-* [ ] Verified evaluations
-* [ ] Creator publishing
-
-### Research
-
-* [ ] Synomorph runtime experiments
-* [ ] Procedural policy experiments
-* [ ] Adaptive compute experiments
-* [ ] Alternative Brain Cards
-
-The roadmap will change as the project develops.
-
-## Quick Start
-
-OpenBot is not ready for a stable public installation yet.
-
-Installation instructions will be added when the first usable release is available.
-
-For development builds, see the development documentation in this repository.
-
-## Development
-
-Development instructions will be added as the initial repository structure stabilizes.
-
-The intended workflow will include:
-
-```bash
-git clone <repository>
-cd Navin-OpenBot
-
-# install dependencies
-# configure providers
-# start development environment
-```
-
-Exact commands will be documented when the bootstrap process is stable.
+These systems are not assumed to be better than general models. They have to earn their place through evaluation.
 
 ## Documentation
 
-Current documents live in [`docs/`](./docs): product, architecture, glossary, Cards and Decks, marketplace, security model, and research direction.
+| Area | Purpose |
+| --- | --- |
+| [Product](./docs/PRODUCT.md) | Problem, user promise, work modes, and non-goals |
+| [Architecture](./docs/ARCHITECTURE.md) | Layers, boundary rules, and the execution model |
+| [Cards and Decks](./docs/CARDS_AND_DECKS.md) | Card types, composition, and the portable Deck format |
+| [Security](./docs/SECURITY.md) | Permissions, approvals, secrets, and runtime isolation |
+| [Marketplace](./docs/MARKETPLACE.md) | Package categories, evidence, and trust |
+| [Research](./docs/RESEARCH.md) | Open research questions and the Synomorph direction |
+| [Glossary](./docs/GLOSSARY.md) | Terminology used across the project |
 
-Diagrams live in [`docs/diagrams/`](./docs/diagrams) as editable `.excalidraw` sources alongside their exported `.svg`.
+## Roadmap
 
-Documentation will be organized around:
+The roadmap will change as the project develops.
 
-| Area            | Purpose                                          |
-| --------------- | ------------------------------------------------ |
-| Getting Started | From installation to the first completed job     |
-| Crew            | Workers, roles, handoffs, and collaboration      |
-| Models          | Providers, local models, and routing             |
-| Harnesses       | External worker runtimes and adapters            |
-| Runtimes        | Local, cloud, VPS, sandbox, and remote execution |
-| Cards           | Reusable OpenBot components                      |
-| Decks           | Portable working configurations                  |
-| Skills          | Teaching and reusing workflows                   |
-| Memory          | Scope, storage, permissions, and retrieval       |
-| Security        | Policies, secrets, approvals, and isolation      |
-| Marketplace     | Publishing and installing components             |
-| Development     | Architecture, APIs, and contribution guides      |
-| Research        | Experimental intelligence and Synomorph          |
+### Foundation
+
+- [ ] Core worker runtime
+- [ ] Task/session model
+- [ ] Provider abstraction
+- [ ] Tool execution, terminal, filesystem
+- [ ] Basic web interface
+- [ ] Configuration system
+
+### Crew
+
+- [ ] Multiple workers and parallel execution
+- [ ] Worker-to-worker messages and task handoff
+- [ ] Shared workspace and scoped memory
+- [ ] Human interruption
+
+### Runtime
+
+- [ ] Local runtime
+- [ ] Docker runtime
+- [ ] Remote runtime and cloud sandbox adapters
+- [ ] Runtime routing
+
+### Harnesses
+
+- [ ] Native OpenBot
+- [ ] Codex, Claude Code, OpenCode, Pi, and OpenHands adapters
+
+### Cards and Decks
+
+- [ ] Card specification
+- [ ] Deck format
+- [ ] Import / export and versioning
+- [ ] Deck editor
+
+### Learning
+
+- [ ] Skill capture and Teach a Task
+- [ ] Run replay
+- [ ] Skill evaluation and optimization
+- [ ] Habit compilation
+
+### Marketplace
+
+- [ ] Public registry and package discovery
+- [ ] Install / update
+- [ ] Fork / remix
+- [ ] Verified evaluations and creator publishing
+
+### Research
+
+- [ ] Synomorph runtime experiments
+- [ ] Procedural policy experiments
+- [ ] Alternative Brain Cards
 
 ## Contributing
 
-OpenBot is being developed in the open.
+OpenBot is being developed in the open. Contributions are welcome across the core runtime, provider and harness adapters, runtime adapters, tools and MCP integrations, Skills, Cards and Decks, evaluation, security, documentation, UI, and research.
 
-Contributions will be welcome across:
-
-* core runtime
-* provider adapters
-* harness adapters
-* runtime adapters
-* tools and MCP integrations
-* Skills
-* Cards and Decks
-* evaluation
-* security
-* documentation
-* UI
-* research
-
-Before submitting a large implementation, open an issue or discussion so the architecture can be agreed on first.
-
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for design principles, status language, and pull request expectations, and [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) for the standard expected in project spaces.
+Before submitting a large implementation, open an issue or discussion so the architecture can be agreed on first. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for design principles and pull request expectations, and [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) for the standard expected in project spaces.
 
 ## Security
 
-OpenBot executes tools, commands, browsers, and potentially remote systems.
+OpenBot executes tools, commands, browsers, and potentially remote systems. Security issues should not be reported through public issues — see [`SECURITY.md`](./SECURITY.md) for the disclosure process, and [`docs/SECURITY.md`](./docs/SECURITY.md) for the permission and isolation model.
 
-Security issues should not be reported through public issues.
-
-See [`SECURITY.md`](./SECURITY.md) for the responsible disclosure process, and [`docs/SECURITY.md`](./docs/SECURITY.md) for the permission, approval, and isolation model OpenBot is being designed around.
-
-Until then, do not deploy development builds into sensitive production environments.
+Until there is a stable release, do not deploy development builds into sensitive production environments.
 
 ## Community
 
 OpenBot is a project from **Navin Research**.
 
-Website: https://navinresearch.com
+Website: https://openbot.navinresearch.com/
 
 Community links and project discussions will be added as they become available.
-
-## Research
-
-Some parts of OpenBot are also research questions.
-
-We are interested in:
-
-* adaptive model and harness routing
-* long-horizon work
-* agent reliability
-* procedural memory
-* skill compilation
-* evaluation and replay
-* memory architecture
-* runtime isolation
-* multi-worker coordination
-* learning from successful trajectories
-* biological and synthetic control systems
-
-Research prototypes are kept separate from production claims.
 
 ## License
 
@@ -758,19 +228,7 @@ Navin OpenBot is licensed under the [Apache License 2.0](./LICENSE).
 
 ## Acknowledgements
 
-OpenBot is influenced by the broader open agent ecosystem and the people building it.
-
-Projects worth studying include:
-
-* Hermes Agent
-* Pi
-* OpenClaw
-* DeerFlow
-* OpenHands
-* Agent Zero
-* Letta
-* Browser Use
-* MCP and the open tooling ecosystem
+OpenBot is influenced by the broader open agent ecosystem and the people building it. Projects worth studying include Hermes Agent, Pi, OpenClaw, DeerFlow, OpenHands, Agent Zero, Letta, Browser Use, and the MCP and open tooling ecosystem.
 
 OpenBot intends to build alongside that ecosystem rather than hide it behind a closed stack.
 

@@ -73,6 +73,13 @@ Scoped stores with ownership and ACL.
 Suggested scopes:
 `user → organization → workspace → project → crew → worker → task → ephemeral`
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./diagrams/memory-scopes-dark.svg" />
+    <img src="./diagrams/memory-scopes.svg" alt="Memory scopes from user down to temporary context" />
+  </picture>
+</p>
+
 Suggested metadata:
 - owner
 - scope

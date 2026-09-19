@@ -16,6 +16,13 @@ Modern agent systems often force early choices:
 
 OpenBot reverses the dependency: **the job defines the stack, not the stack defining the job.**
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./diagrams/job-router-dark.svg" />
+    <img src="./diagrams/job-router.svg" alt="The job comes first: OpenBot Router selects crew, harness, and runtime, then work runs through tools and memory" />
+  </picture>
+</p>
+
 ## User Promise
 
 A user should be able to:
@@ -70,6 +77,13 @@ One worker produces; another independently reviews.
 
 ### Team
 A Crew decomposes and hands off work among specialized roles.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./diagrams/crew-dark.svg" />
+    <img src="./diagrams/crew.svg" alt="A crew: one lead delegating to research, builder, and reviewer, with QA checking the reviewer's output" />
+  </picture>
+</p>
 
 ### Arena
 Multiple configurations receive the same task, budget, and constraints for measured comparison.
