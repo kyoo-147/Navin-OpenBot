@@ -5,7 +5,10 @@
 OpenBot separates the layers that many agent products bundle together.
 
 <p align="center">
-  <img src="./diagrams/architecture.svg" alt="OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./diagrams/architecture-dark.svg" />
+    <img src="./diagrams/architecture.svg" alt="OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning" />
+  </picture>
 </p>
 
 ## Core Layers

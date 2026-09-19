@@ -15,7 +15,8 @@ applies.
 - Product, architecture, glossary, Cards and Decks, marketplace, security, and
   research documentation under `docs/`
 - `AGENTS.md` with working rules and terminology for coding agents
-- Diagrams under `docs/diagrams/`, as editable `.excalidraw` sources alongside exported `.svg`
+- Diagrams under `docs/diagrams/`, each as an editable `.excalidraw` source and an
+  exported `.svg`, in light and dark variants
 - Apache-2.0 license
 - Contributing, security, and code of conduct policies
 

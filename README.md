@@ -51,7 +51,10 @@ OpenBot takes a different approach.
 The job comes first.
 
 <p align="center">
-  <img src="./docs/diagrams/job-router.svg" alt="The job comes first: OpenBot Router selects crew, harness, and runtime, then work runs through tools and memory" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/job-router-dark.svg" />
+    <img src="./docs/diagrams/job-router.svg" alt="The job comes first: OpenBot Router selects crew, harness, and runtime, then work runs through tools and memory" />
+  </picture>
 </p>
 
 OpenBot is designed so every layer can evolve independently.
@@ -138,7 +141,10 @@ A simple task may only need one worker.
 A product task might form something like:
 
 <p align="center">
-  <img src="./docs/diagrams/crew.svg" alt="A crew: one lead delegating to research, builder, and reviewer, with QA checking the reviewer's output" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/crew-dark.svg" />
+    <img src="./docs/diagrams/crew.svg" alt="A crew: one lead delegating to research, builder, and reviewer, with QA checking the reviewer's output" />
+  </picture>
 </p>
 
 The Crew can change with the job.
@@ -314,7 +320,10 @@ OpenBot should not solve the same problem from zero forever.
 The learning loop is:
 
 <p align="center">
-  <img src="./docs/diagrams/learning-loop.svg" alt="The learning loop: reason, execute, verify, learn, reuse" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/learning-loop-dark.svg" />
+    <img src="./docs/diagrams/learning-loop.svg" alt="The learning loop: reason, execute, verify, learn, reuse" />
+  </picture>
 </p>
 
 When a workflow succeeds, OpenBot can preserve what mattered.
@@ -322,7 +331,10 @@ When a workflow succeeds, OpenBot can preserve what mattered.
 Repeated work can gradually move from expensive general reasoning toward reusable execution.
 
 <p align="center">
-  <img src="./docs/diagrams/compilation-path.svg" alt="Progressive compilation: reasoning, skill, workflow, tool calls and scripts, procedural execution" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/compilation-path-dark.svg" />
+    <img src="./docs/diagrams/compilation-path.svg" alt="Progressive compilation: reasoning, skill, workflow, tool calls and scripts, procedural execution" />
+  </picture>
 </p>
 
 The general model remains available when something new or uncertain happens.
@@ -357,7 +369,10 @@ Different kinds of memory should not all live in one bucket.
 OpenBot is being designed around scoped memory.
 
 <p align="center">
-  <img src="./docs/diagrams/memory-scopes.svg" alt="Memory scopes from user down to temporary context" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/memory-scopes-dark.svg" />
+    <img src="./docs/diagrams/memory-scopes.svg" alt="Memory scopes from user down to temporary context" />
+  </picture>
 </p>
 
 Memory can carry ownership, provenance, permissions, confidence, and lifetime.
@@ -538,7 +553,10 @@ Specialized systems are explored for repeated, constrained, low-latency, embodie
 The planned architecture separates the pieces that are usually bundled together.
 
 <p align="center">
-  <img src="./docs/diagrams/architecture.svg" alt="OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/diagrams/architecture-dark.svg" />
+    <img src="./docs/diagrams/architecture.svg" alt="OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning" />
+  </picture>
 </p>
 
 The architecture is intentionally modular.
