@@ -6,7 +6,7 @@
 
 Navin OpenBot brings together the right crew, models, harnesses, tools, and machines around the job, with every part yours to configure, replace, and shape however you want.
 
-[Website](https://navinresearch.com) · Documentation · Marketplace · Community
+[Website](https://navinresearch.com) · [Documentation](./docs) · Marketplace · Community
 
 </div>
 
@@ -735,6 +735,8 @@ Exact commands will be documented when the bootstrap process is stable.
 
 ## Documentation
 
+Current documents live in [`docs/`](./docs): product, architecture, glossary, Cards and Decks, marketplace, security model, and research direction.
+
 Documentation will be organized around:
 
 | Area            | Purpose                                          |
@@ -774,7 +776,7 @@ Contributions will be welcome across:
 
 Before submitting a large implementation, open an issue or discussion so the architecture can be agreed on first.
 
-A dedicated `CONTRIBUTING.md` will contain development setup, code style, testing, and pull request requirements.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for design principles, status language, and pull request expectations, and [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) for the standard expected in project spaces.
 
 ## Security
 
@@ -782,7 +784,7 @@ OpenBot executes tools, commands, browsers, and potentially remote systems.
 
 Security issues should not be reported through public issues.
 
-A dedicated `SECURITY.md` will document the responsible disclosure process before the first public release.
+See [`SECURITY.md`](./SECURITY.md) for the responsible disclosure process, and [`docs/SECURITY.md`](./docs/SECURITY.md) for the permission, approval, and isolation model OpenBot is being designed around.
 
 Until then, do not deploy development builds into sensitive production environments.
 
@@ -816,9 +818,7 @@ Research prototypes are kept separate from production claims.
 
 ## License
 
-License information will be added before the first public release.
-
-If you plan to use, redistribute, or build on OpenBot, check the repository license before doing so.
+Navin OpenBot is licensed under the [Apache License 2.0](./LICENSE).
 
 ## Acknowledgements
 
