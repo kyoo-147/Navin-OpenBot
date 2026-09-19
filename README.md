@@ -9,7 +9,7 @@
 Navin OpenBot brings together the right crew, models, harnesses, tools, and machines around the job, with every part yours to configure, replace, and shape however you want.
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
-[![Status](https://img.shields.io/badge/status-early%20development-orange.svg)](#project-status)
+[![Status](https://img.shields.io/badge/status-not%20publicly%20released-orange.svg)](#project-status)
 
 [Website](https://openbot.navinresearch.com/) · [Documentation](./docs) · Marketplace · Community
 
@@ -19,7 +19,9 @@ Navin OpenBot brings together the right crew, models, harnesses, tools, and mach
 
 > **Project status**
 >
-> OpenBot is in early development. Nothing here is installable yet.
+> OpenBot is in early development, and the source is **not publicly released yet**.
+>
+> The code will be published once it has completed testing, verification, and operational validation in enterprise deployments. Until then, OpenBot is a commercial product and this repository documents the project rather than distributing a working build.
 >
 > The concepts below describe both working components and the direction of the project. Features that are not ready are marked accordingly.
 
