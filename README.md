@@ -50,7 +50,9 @@ OpenBot takes a different approach.
 
 The job comes first.
 
-![The job comes first: OpenBot Router selects crew, harness, and runtime, then work runs through tools and memory](./docs/diagrams/job-router.svg)
+<p align="center">
+  <img src="./docs/diagrams/job-router.svg" alt="The job comes first: OpenBot Router selects crew, harness, and runtime, then work runs through tools and memory" />
+</p>
 
 OpenBot is designed so every layer can evolve independently.
 
@@ -135,7 +137,9 @@ A simple task may only need one worker.
 
 A product task might form something like:
 
-![A crew: one lead delegating to research, builder, and reviewer, with QA checking the reviewer's output](./docs/diagrams/crew.svg)
+<p align="center">
+  <img src="./docs/diagrams/crew.svg" alt="A crew: one lead delegating to research, builder, and reviewer, with QA checking the reviewer's output" />
+</p>
 
 The Crew can change with the job.
 
@@ -309,13 +313,17 @@ OpenBot should not solve the same problem from zero forever.
 
 The learning loop is:
 
-![The learning loop: reason, execute, verify, learn, reuse](./docs/diagrams/learning-loop.svg)
+<p align="center">
+  <img src="./docs/diagrams/learning-loop.svg" alt="The learning loop: reason, execute, verify, learn, reuse" />
+</p>
 
 When a workflow succeeds, OpenBot can preserve what mattered.
 
 Repeated work can gradually move from expensive general reasoning toward reusable execution.
 
-![Progressive compilation: reasoning, skill, workflow, tool calls and scripts, procedural execution](./docs/diagrams/compilation-path.svg)
+<p align="center">
+  <img src="./docs/diagrams/compilation-path.svg" alt="Progressive compilation: reasoning, skill, workflow, tool calls and scripts, procedural execution" />
+</p>
 
 The general model remains available when something new or uncertain happens.
 
@@ -348,7 +356,9 @@ Different kinds of memory should not all live in one bucket.
 
 OpenBot is being designed around scoped memory.
 
-![Memory scopes from user down to temporary context](./docs/diagrams/memory-scopes.svg)
+<p align="center">
+  <img src="./docs/diagrams/memory-scopes.svg" alt="Memory scopes from user down to temporary context" />
+</p>
 
 Memory can carry ownership, provenance, permissions, confidence, and lifetime.
 
@@ -527,7 +537,9 @@ Specialized systems are explored for repeated, constrained, low-latency, embodie
 
 The planned architecture separates the pieces that are usually bundled together.
 
-![OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning](./docs/diagrams/architecture.svg)
+<p align="center">
+  <img src="./docs/diagrams/architecture.svg" alt="OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning" />
+</p>
 
 The architecture is intentionally modular.
 

@@ -4,6 +4,29 @@
   "source": "https://github.com/kyoo-147/Navin-OpenBot",
   "elements": [
     {
+      "id": "background",
+      "type": "rectangle",
+      "x": 94,
+      "y": -36,
+      "width": 892,
+      "height": 496,
+      "angle": 0,
+      "strokeColor": "transparent",
+      "backgroundColor": "#1e1e1e",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElementIds": null
+    },
+    {
       "id": "c_lead",
       "type": "rectangle",
       "x": 450,
@@ -11,7 +34,7 @@
       "width": 180,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#ffec99",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -63,7 +86,7 @@
       "width": 220,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#a5d8ff",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -115,7 +138,7 @@
       "width": 220,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#a5d8ff",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -167,7 +190,7 @@
       "width": 220,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#a5d8ff",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -219,7 +242,7 @@
       "width": 170,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#b2f2bb",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -266,12 +289,12 @@
     {
       "id": "edge_c_lead__c_research",
       "type": "arrow",
-      "x": 540,
+      "x": 240,
       "y": 64,
       "width": 300,
       "height": 116,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -287,19 +310,19 @@
       "boundElementIds": null,
       "points": [
         [
-          0,
+          300,
           0
         ],
         [
+          300,
+          58
+        ],
+        [
           0,
           58
         ],
         [
-          -300,
-          58
-        ],
-        [
-          -300,
+          0,
           116
         ]
       ],
@@ -317,7 +340,7 @@
       "width": 0,
       "height": 116,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -355,7 +378,7 @@
       "width": 300,
       "height": 116,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -401,7 +424,7 @@
       "width": 0,
       "height": 116,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -433,7 +456,7 @@
     }
   ],
   "appState": {
-    "viewBackgroundColor": "#ffffff",
+    "viewBackgroundColor": "#1e1e1e",
     "gridSize": null,
     "exportBackground": true
   }

@@ -4,6 +4,29 @@
   "source": "https://github.com/kyoo-147/Navin-OpenBot",
   "elements": [
     {
+      "id": "background",
+      "type": "rectangle",
+      "x": -36,
+      "y": -36,
+      "width": 1152,
+      "height": 796,
+      "angle": 0,
+      "strokeColor": "transparent",
+      "backgroundColor": "#1e1e1e",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1,
+      "version": 1,
+      "versionNonce": 1,
+      "isDeleted": false,
+      "boundElementIds": null
+    },
+    {
       "id": "d_job",
       "type": "rectangle",
       "x": 450,
@@ -11,7 +34,7 @@
       "width": 180,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#e9ecef",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -63,7 +86,7 @@
       "width": 280,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#ffec99",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -115,7 +138,7 @@
       "width": 220,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#a5d8ff",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -167,7 +190,7 @@
       "width": 220,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#b2f2bb",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -219,7 +242,7 @@
       "width": 220,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#ffd8a8",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -271,7 +294,7 @@
       "width": 280,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#d0bfff",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -323,7 +346,7 @@
       "width": 180,
       "height": 64,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "#e9ecef",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -375,7 +398,7 @@
       "width": 0,
       "height": 76,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -408,12 +431,12 @@
     {
       "id": "edge_d_router__d_crew",
       "type": "arrow",
-      "x": 540,
+      "x": 110,
       "y": 204,
       "width": 430,
       "height": 116,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -429,19 +452,19 @@
       "boundElementIds": null,
       "points": [
         [
-          0,
+          430,
           0
         ],
         [
+          430,
+          58
+        ],
+        [
           0,
           58
         ],
         [
-          -430,
-          58
-        ],
-        [
-          -430,
+          0,
           116
         ]
       ],
@@ -459,7 +482,7 @@
       "width": 0,
       "height": 116,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -497,7 +520,7 @@
       "width": 430,
       "height": 116,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -543,7 +566,7 @@
       "width": 430,
       "height": 136,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -589,7 +612,7 @@
       "width": 0,
       "height": 136,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -622,12 +645,12 @@
     {
       "id": "edge_d_runtime__d_tools",
       "type": "arrow",
-      "x": 970,
+      "x": 540,
       "y": 384,
       "width": 430,
       "height": 136,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -643,19 +666,19 @@
       "boundElementIds": null,
       "points": [
         [
-          0,
+          430,
           0
         ],
         [
+          430,
+          68
+        ],
+        [
           0,
           68
         ],
         [
-          -430,
-          68
-        ],
-        [
-          -430,
+          0,
           136
         ]
       ],
@@ -673,7 +696,7 @@
       "width": 0,
       "height": 76,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#ffffff",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -705,7 +728,7 @@
     }
   ],
   "appState": {
-    "viewBackgroundColor": "#ffffff",
+    "viewBackgroundColor": "#1e1e1e",
     "gridSize": null,
     "exportBackground": true
   }
