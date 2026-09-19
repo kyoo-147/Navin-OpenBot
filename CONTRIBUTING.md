@@ -4,20 +4,27 @@ Thanks for taking the time to look at this project.
 
 ## Project stage
 
-OpenBot is in **early development**. The architecture and interfaces are still
-being defined, and large parts of the system described in the README and in
-[`docs/`](./docs) are **planned rather than implemented**.
+OpenBot is in **early development**, and the **source is not publicly released
+yet**. It will be published once it has completed testing, verification, and
+operational validation in enterprise deployments.
 
-Because of that, please read [Project status](./README.md#project-status) and
+Until then this repository contains documentation rather than a working build,
+so what is most useful right now is **feedback on the design**: challenge
+assumptions, point out gaps, and flag anything that would lock the project into a
+direction it is explicitly trying to avoid.
+
+Please read [Project status](./README.md#project-status) and
 [`docs/PRODUCT.md`](./docs/PRODUCT.md) before proposing anything substantial.
-Do not infer what is shipped from the vision documents — check the code.
+Do not infer what is shipped from the vision documents.
 
 ## Before you write code
 
-For anything larger than a small fix, **open an issue or a discussion first** so
-the design can be agreed on before implementation. This avoids work that has to
-be thrown away because it locks the project into a direction it is explicitly
-trying not to take.
+Once the source is released, open an issue or a discussion before anything
+larger than a small fix, so the design can be agreed on before implementation.
+This avoids work that has to be thrown away because it locks the project into a
+direction it is explicitly trying not to take.
+
+Until then, raise design concerns as issues against the documents themselves.
 
 ## Design principles
 
@@ -61,7 +68,7 @@ Never silently turn a planned feature into a shipped claim.
 
 ## Contribution areas
 
-Contributions are welcome across:
+Once the source is released, contributions will be welcome across:
 
 - core runtime
 - provider adapters
@@ -83,6 +90,8 @@ workflow to document. This section will be filled in when the initial repository
 structure stabilizes.
 
 ## Submitting changes
+
+Once the source is released:
 
 1. Fork the repository and create a branch from `main`.
 2. Keep the change focused — one concern per pull request.

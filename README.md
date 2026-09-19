@@ -37,7 +37,7 @@ OpenBot adapts around the work instead of forcing the work into one stack.
 
 ## Quick start
 
-OpenBot is not ready for a stable public installation yet. Installation instructions will be added when the first usable release is available.
+OpenBot is not publicly available yet. The source will be published once it has completed testing, verification, and operational validation in enterprise deployments.
 
 Until then, the entry point is the design documentation in [`docs/`](./docs).
 
@@ -206,9 +206,11 @@ The roadmap will change as the project develops.
 
 ## Contributing
 
-OpenBot is being developed in the open. Contributions are welcome across the core runtime, provider and harness adapters, runtime adapters, tools and MCP integrations, Skills, Cards and Decks, evaluation, security, documentation, UI, and research.
+OpenBot will be developed in the open once the source is released. Until then, feedback on the design documents in [`docs/`](./docs) is welcome — open an issue or discussion to challenge an assumption before it becomes code.
 
-Before submitting a large implementation, open an issue or discussion so the architecture can be agreed on first. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for design principles and pull request expectations, and [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) for the standard expected in project spaces.
+When the source is released, contributions will be welcome across the core runtime, provider and harness adapters, runtime adapters, tools and MCP integrations, Skills, Cards and Decks, evaluation, security, documentation, UI, and research.
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for design principles, and [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) for the standard expected in project spaces.
 
 ## Security
 
