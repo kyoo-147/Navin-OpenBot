@@ -96,28 +96,12 @@ A Deck can contain:
 
 ## Example
 
-```text
-Website Builder Deck
-├─ Crew
-│  ├─ Planner
-│  ├─ Frontend
-│  ├─ Backend
-│  └─ Reviewer
-├─ Skills
-│  ├─ Repository Analysis
-│  ├─ UI Implementation
-│  └─ Browser Verification
-├─ Tools
-│  ├─ Browser
-│  ├─ Terminal
-│  └─ GitHub
-├─ Runtime
-│  └─ Auto
-├─ Memory
-│  └─ Project Context
-└─ Policy
-   └─ Production deployment requires approval
-```
+- **Crew**: Planner, Frontend, Backend, Reviewer
+- **Skills**: Repository Analysis, UI Implementation, Browser Verification
+- **Tools**: Browser, Terminal, GitHub
+- **Runtime**: Auto
+- **Memory**: Project Context
+- **Policy**: Production deployment requires approval
 
 ## UX Goal
 

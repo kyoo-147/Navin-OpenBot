@@ -4,37 +4,7 @@
 
 OpenBot separates the layers that many agent products bundle together.
 
-```text
-                           Job
-                            |
-                        Task Graph
-                            |
-                      Smart Router
-                            |
-         +------------------+------------------+
-         |                  |                  |
-      Crew Router       Harness Router     Runtime Router
-         |                  |                  |
-      Workers          Agent Harnesses       Machines
-         |                  |                  |
-         +------------------+------------------+
-                            |
-                       Execution Bus
-                            |
-             +--------------+--------------+
-             |              |              |
-           MCP/API       Browser/GUI     Terminal/Files
-             |              |              |
-             +--------------+--------------+
-                            |
-                    Memory + Artifacts
-                            |
-                    Policy + Approval
-                            |
-                     Trace + Replay
-                            |
-                    Evals + Learning
-```
+![OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning](./diagrams/architecture.svg)
 
 ## Core Layers
 

@@ -50,27 +50,7 @@ OpenBot takes a different approach.
 
 The job comes first.
 
-```text
-                         JOB
-                          │
-                    OpenBot Router
-                          │
-          ┌───────────────┼───────────────┐
-          │               │               │
-        Crew            Harness         Runtime
-          │               │               │
-      Researcher       Codex           Local
-      Builder          Claude Code     Cloud
-      Reviewer         OpenCode        VPS
-      Operator         Pi              Sandbox
-                       OpenHands       Remote
-          │               │               │
-          └───────────────┼───────────────┘
-                          │
-                    Tools + Memory
-                          │
-                       Result
-```
+![The job comes first: OpenBot Router selects crew, harness, and runtime, then work runs through tools and memory](./docs/diagrams/job-router.svg)
 
 OpenBot is designed so every layer can evolve independently.
 
@@ -155,15 +135,7 @@ A simple task may only need one worker.
 
 A product task might form something like:
 
-```text
-                 Lead
-                  │
-       ┌──────────┼──────────┐
-       │          │          │
-   Research     Builder    Reviewer
-                              │
-                              QA
-```
+![A crew: one lead delegating to research, builder, and reviewer, with QA checking the reviewer's output](./docs/diagrams/crew.svg)
 
 The Crew can change with the job.
 
@@ -337,33 +309,13 @@ OpenBot should not solve the same problem from zero forever.
 
 The learning loop is:
 
-```text
-Reason
-   ↓
-Execute
-   ↓
-Verify
-   ↓
-Learn
-   ↓
-Reuse
-```
+![The learning loop: reason, execute, verify, learn, reuse](./docs/diagrams/learning-loop.svg)
 
 When a workflow succeeds, OpenBot can preserve what mattered.
 
 Repeated work can gradually move from expensive general reasoning toward reusable execution.
 
-```text
-Reasoning
-   ↓
-Skill
-   ↓
-Workflow
-   ↓
-Tool calls / scripts
-   ↓
-Procedural execution
-```
+![Progressive compilation: reasoning, skill, workflow, tool calls and scripts, procedural execution](./docs/diagrams/compilation-path.svg)
 
 The general model remains available when something new or uncertain happens.
 
@@ -396,23 +348,7 @@ Different kinds of memory should not all live in one bucket.
 
 OpenBot is being designed around scoped memory.
 
-```text
-User
-  │
-Organization
-  │
-Workspace
-  │
-Project
-  │
-Crew
-  │
-Worker
-  │
-Task
-  │
-Temporary Context
-```
+![Memory scopes from user down to temporary context](./docs/diagrams/memory-scopes.svg)
 
 Memory can carry ownership, provenance, permissions, confidence, and lifetime.
 
@@ -473,15 +409,15 @@ OpenBot is being designed around explicit permissions and approval points.
 
 Examples:
 
-```text
-Sending email           Ask first
-Production deployment   Ask first
-Deleting data            Ask first
-GitHub read              Allow
-GitHub write             Scoped
-External network         Restricted
-Maximum task cost        $5
-```
+| Action | Policy |
+| --- | --- |
+| Sending email | Ask first |
+| Production deployment | Ask first |
+| Deleting data | Ask first |
+| GitHub read | Allow |
+| GitHub write | Scoped |
+| External network | Restricted |
+| Maximum task cost | $5 |
 
 Different workers can have different permissions.
 
@@ -591,39 +527,7 @@ Specialized systems are explored for repeated, constrained, low-latency, embodie
 
 The planned architecture separates the pieces that are usually bundled together.
 
-```text
-                       Navin OpenBot
-                             │
-                         Job Graph
-                             │
-                       Smart Router
-                             │
-             ┌───────────────┼───────────────┐
-             │               │               │
-           Crew            Harness         Runtime
-          Router            Router          Router
-             │               │               │
-       Roles / Cards    Agent systems    Local / Cloud
-             │               │           VPS / Sandbox
-             └───────────────┼───────────────┘
-                             │
-                        Execution Bus
-                             │
-              ┌──────────────┼──────────────┐
-              │              │              │
-             MCP          Browser         Terminal
-             API          Computer        Files
-              │              │              │
-              └──────────────┼──────────────┘
-                             │
-                    Memory + Artifacts
-                             │
-                     Policy + Approval
-                             │
-                      Traces + Evals
-                             │
-                       Skill Learning
-```
+![OpenBot architecture: job graph, smart router, crew/harness/runtime routers, execution bus, tools, memory, policy, traces, and skill learning](./docs/diagrams/architecture.svg)
 
 The architecture is intentionally modular.
 
@@ -736,6 +640,8 @@ Exact commands will be documented when the bootstrap process is stable.
 ## Documentation
 
 Current documents live in [`docs/`](./docs): product, architecture, glossary, Cards and Decks, marketplace, security model, and research direction.
+
+Diagrams live in [`docs/diagrams/`](./docs/diagrams) as editable `.excalidraw` sources alongside their exported `.svg`.
 
 Documentation will be organized around:
 
